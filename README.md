@@ -21,7 +21,8 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
 * /pets returns all pets and their parameters (id, breed, age, desc, gender, adoptable, species)
 * /pets/:id returns an pet and its parameters matching the id
 * /pets/random will return a random pet and its parameters
-* /pets?name= will return a search result for a pet by a specific name.
+* /pets?name= will return a search result for a pet by a specific name
+* /pets?page=2 will return a list of 10 pets per page
 
 ## DELETE
 * /pets/:id will delete an pet and its parameters matching the id

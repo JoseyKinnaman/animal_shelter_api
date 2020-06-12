@@ -4,6 +4,7 @@ class PetsController < ApplicationController
       @pets = Pet.search(name)
     else
       @pets = Pet.all 
+      @pets = Pet.page(params[:page]).per(10)
     end
     json_response(@pets)
   end
