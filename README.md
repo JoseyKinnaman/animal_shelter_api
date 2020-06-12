@@ -11,7 +11,6 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
   * Type "bundle install" to bundle gems
   * Type "rake db:setup" to create databases and migrations
   * Type "rails s" to run on local server
-  * Type "rails c" to try out on rails console
   * Access "localhost:3000" 
   * Heroku in Postman or cURL for calls. https://animal-shelter-api.herokuapp.com/pets/random
 
