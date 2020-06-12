@@ -7,7 +7,7 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
 
 ## Setup//Install
  * Clone in terminal : https://github.com/JoseyKinnaman/animal_shelter_api.git
-  * Navigate into directory by typing "cd animal_shelter"
+  * Navigate into directory by typing "cd animal_shelter_api"
   * Type "bundle install" to bundle gems
   * Type "rake db:setup" to create databases and migrations
   * Type "rails s" to run on local server
@@ -17,10 +17,11 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
 
 # Endpoints
 
-## GET (All and By ID)
+## GET 
 * /pets returns all pets and their parameters (id, breed, age, desc, gender, adoptable, species)
 * /pets/:id returns an pet and its parameters matching the id
 * /pets/random will return a random pet and its parameters
+* /pets?name= will return a search result for a pet by a specific name.
 
 ## DELETE
 * /pets/:id will delete an pet and its parameters matching the id
