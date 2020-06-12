@@ -13,7 +13,7 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
   * Type "rails s" to run on local server
   * Type "rails c" to try out on rails console
   * Access "localhost:3000" 
-  * Heroku in Postman or cURL for calls. 
+  * Heroku in Postman or cURL for calls. https://animal-shelter-api.herokuapp.com/pets/random
 
 # Endpoints
 
