@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :pets
-  root to: 'pets#index'
+root to: 'pets#index'
+  resources :pets do
+    collection do
+      get 'random'
+    end
+  end
 end

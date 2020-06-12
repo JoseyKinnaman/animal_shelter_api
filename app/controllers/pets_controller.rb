@@ -36,6 +36,11 @@ class PetsController < ApplicationController
     end
   end
 
+  def random
+    @pet = Pet.find(rand(100))
+    json_response(@pet)
+  end
+
   private
 
   def pet_params
