@@ -9,3 +9,10 @@ describe "post a pet route with exception handling error", :type => :request do
     expect(response).to have_http_status(422)
   end
 end
+
+describe "get a pet route with exception handling error", :type => :request do 
+  before { get '/pets/200'}
+  it 'returns a not found error' do
+    expect(response).to have_http_status(:not_found)
+  end
+end
