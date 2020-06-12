@@ -1,6 +1,10 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pet.all
+    if name = params[:name]
+      @pets = Pet.search(name)
+    else
+      @pets = Pet.all 
+    end
     json_response(@pets)
   end
 
