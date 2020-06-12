@@ -20,7 +20,7 @@ A Ruby on Rails Friday Project excercise for building  an API. Epicodus, 2020.
 ## GET (All and By ID)
 * /pets returns all pets and their parameters (id, breed, age, desc, gender, adoptable, species)
 * /pets/:id returns an pet and its parameters matching the id
-<!-- * /pets/random will return a random pet and its parameters -->
+* /pets/random will return a random pet and its parameters
 
 ## DELETE
 * /pets/:id will delete an pet and its parameters matching the id
