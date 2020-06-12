@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+class Seed
+
+  def self.begin
+    seed = Seed.new
+    seed.generate_pets
+  end
+
+  def generate_pets
+    50.times do |i|
+      pet = Pet.create!(
+        breed: Faker::Creature::Dog.breed,
+        age: Faker::Number.between(from: 1, to: 10),
+        gender: Faker::Creature::Dog.gender, 
+        desc: Faker::Quotes::Shakespeare.as_you_like_it_quote, 
+        name: Faker::Creature::Dog.name,
+        species: "dog"
+      )
+    end
+     50.times do |i|
+      pet = Pet.create!(
+        breed: Faker::Creature::Cat.breed,
+        age: Faker::Number.between(from: 1, to: 10),
+        gender: Faker::Creature::Dog.gender, 
+        desc: Faker::Quotes::Shakespeare.as_you_like_it_quote, 
+        name: Faker::Creature::Cat.name,
+        species: "cat"
+      )
+    end
+    p "Created #{Pet.count} pets"
+  end
+end
+
+
+Seed.begin
