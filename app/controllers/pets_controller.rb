@@ -1,10 +1,12 @@
 class PetsController < ApplicationController
   def index
     if name = params[:name]
-      @pets = Pet.search(name)
+      @pets = Pet.search(name)    
+    elsif params[:page].present?
+      @pets = Pet.all 
+      @pets = Pet.page(params[:page]).per(10)   
     else
       @pets = Pet.all 
-      @pets = Pet.page(params[:page]).per(10)
     end
     json_response(@pets)
   end
