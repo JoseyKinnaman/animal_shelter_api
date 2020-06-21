@@ -40,7 +40,10 @@ class PetsController < ApplicationController
   end
 
   def random
-    @pet = Pet.find(rand(100))
+    @pet_one = Pet.first.id
+    @last_pet = Pet.last.id
+    @random_pet = rand(@pet_one...@last_pet)
+    @pet = Pet.find(@random_pet)
     json_response(@pet)
   end
 
