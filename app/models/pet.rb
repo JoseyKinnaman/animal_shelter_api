@@ -5,5 +5,5 @@ class Pet < ApplicationRecord
   validates :gender, presence: true
   validates :name, presence: true
   validates :species, presence: true
-  scope :search, -> (name_parameter) { where("name like ?", "%#{name_parameter}%")}
+  scope :search, -> (name_parameter) { where("name ilike ?", "%#{name_parameter}%")}
 end
